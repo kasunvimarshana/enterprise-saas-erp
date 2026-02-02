@@ -1,5 +1,8 @@
 # Laravel & PHP
 /vendor/
+/backend/vendor/
+/backend/node_modules/
+/frontend/node_modules/
 /node_modules/
 /public/hot
 /public/storage
