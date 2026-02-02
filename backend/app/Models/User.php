@@ -13,6 +13,16 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
+     * Get the tenant that owns the user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function tenant()
+    {
+        return $this->belongsTo(Tenant::class);
+    }
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var list<string>
@@ -21,6 +31,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'tenant_id',
     ];
 
     /**
